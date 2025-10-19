@@ -1,43 +1,96 @@
-/* style.css */
+
+:root {
+  --base-clr: #272838;
+  --secondary-base-clr: #17171c;
+  --text-clr:  #FFFCE8;
+  --line-clr: #BFDBF7;
+  --accent-clr: #DD403A;
+  --hover-clr: #28282D;
+  --secondary-hover-clr: #EF233C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: "Segoe UI", sans-serif;
-  line-height: 1.6;
-  margin: 2em auto;
-  max-width: 800px;
-  padding: 0 1em;
-  background: #fdfdfd;
-  color: #333;
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 18px;
+  background-color: var(--base-clr);
+  color: var(--text-clr);
+  transition: background 0.3s, color 0.3s;
+  line-height: 1.75;
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
 
-header, footer {
-  text-align: center;
-  margin-bottom: 2em;
+#sidebar{
+  box-sizing: border-box;
+  height: 100vh;
+  width: 250px;
+  padding: 5px 1em;
+  background-color: var(--secondary-base-clr);
+  border-right: 1px solid var(--line-clr);
+  position: sticky;
+  top: 0;
+  align-self: start;
 }
 
-h1 {
-  font-size: 2em;
-  color: #0057e7;
+#sidebar ul{
+  list-style: none;
+}
+#sidebar ul li.active a{
+  color: var(--text-clr);
+  svg{
+    fill: var(--text-clr);
+  }
+}
+#sidebar a svg{
+  flex-shrink: 0;
+  fill: var(--accent-clr);
+}
+#sidebar a{
+  border-radius: .5em;
+  padding: .85em;
+  color: var(--accent-clr);
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 
-.author {
-  font-size: 1.1em;
-  color: #777;
+#sidebar a span{
+  flex-grow: 1;
 }
 
-a {
-  color: #0057e7;
-  text-decoration: none;
+#sidebar a:hover{
+  background-color: var(--hover-clr);
+  color: var(--secondary-hover-clr);
 }
 
-a:hover {
-  text-decoration: underline;
+main{
+  padding: min(30px, 7%);
 }
 
-section {
-  margin-bottom: 2em;
+main p{
+  color: var(--text-clr);
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
-footer {
-  font-size: 0.9em;
-  color: #999;
+.container{
+  border: 1px solid var(--line-clr);
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(3em, 15%);
+  margin-top: 1em;
+}
+.container a:active, a:visited{
+  color: var(--accent-clr);
+}
+.container a:hover{
+  color: var(--secondary-hover-clr);
 }
