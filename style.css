@@ -1,12 +1,12 @@
 
 :root {
-  --base-clr: #272838;
-  --secondary-base-clr: #17171c;
+  --base-clr: #1C1C20;
   --text-clr:  #FFFCE8;
   --line-clr: #BFDBF7;
-  --accent-clr: #DD403A;
+  --accent-clr: #9E9ED5;
+  --card-color: #292930;
   --hover-clr: #28282D;
-  --secondary-hover-clr: #EF233C;
+  --button-clr: #35343B;
 }
 
 * {
@@ -81,16 +81,61 @@ main p{
   margin-bottom: 15px;
 }
 
-.container{
-  border: 1px solid var(--line-clr);
-  border-radius: 1em;
-  margin-bottom: 20px;
-  padding: min(3em, 15%);
-  margin-top: 1em;
+.maincontainer{
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  gap: 1rem;
+  grid-template-columns: repeat(2,1fr);
+  display: grid;
+  gap: .5rem;
 }
-.container a:active, a:visited{
+
+.top-right{
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 14px;
+}
+
+.button{
+  margin: 0px 5px 20px;
+  align-items: center;
+  background: var(--button-clr);
+  border: 2px solid var(--line-clr);
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 500 !important;
+  gap: .25rem;
+  line-height: 1;
   color: var(--accent-clr);
+  padding: 10px 14px;
+  text-decoration: none !important;
+  transition: all .1s ease;
+  white-space: nowrap;
 }
-.container a:hover{
-  color: var(--secondary-hover-clr);
+
+.button a:hover{
+  background: var(--hover-clr);
+}
+
+.card{
+  background-image: linear-gradient(
+    to bottom,
+    var(--card-color),
+    var(--base-clr)
+  );
+  border: 2px solid var(--secondary-base-clr);
+  border-radius: 10px;
+  box-shadow: var(--secondary-base-clr);
+  padding: .75rem;
+  position: relative;
+}
+
+.resume{
+  text-align: justify;
+  border: 2px solid var(--secondary-base-clr);
+  border-radius: 10px;
+  box-shadow: var(--secondary-base-clr);
 }
