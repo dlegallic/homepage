@@ -134,8 +134,24 @@ main p{
 }
 
 .resume{
-  text-align: justify;
-  border: 2px solid var(--secondary-base-clr);
-  border-radius: 10px;
-  box-shadow: var(--secondary-base-clr);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  grid-template-columns: 70% 30%;
+  display: grid;
+}
+
+.education{
+  grid-template-columns: 80% 20%;
+  display: grid;
+  gap: .5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;   /* removes left indent */
+  margin: 0;    /* optional: removes top/bottom spacing */
+}
+
+.home{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
 }
