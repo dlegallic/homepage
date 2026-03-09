@@ -90,10 +90,7 @@ main p{
   gap: .5rem;
 }
 
-.top-right{
-  position: absolute;
-  top: 15px;
-  right: 10px;
+.name{
   font-size: 14px;
 }
 
@@ -118,6 +115,11 @@ main p{
 
 .button a:hover{
   background: var(--hover-clr);
+}
+
+.border{
+  display: flex;
+  justify-content: space-between;
 }
 
 .card{
