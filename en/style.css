@@ -39,6 +39,17 @@ body {
   align-self: start;
 }
 
+@media (max-width: 768px){
+  #sidebar{
+    width: 70px;
+    padding: 5px;
+  }
+
+  #sidebar span{
+    display: none;
+  }
+}
+
 #sidebar ul{
   list-style: none;
 }
